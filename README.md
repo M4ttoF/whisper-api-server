@@ -34,33 +34,30 @@ git clone https://github.com/kreolsky/whisper-api-server.git
 cd whisper-api-server
 ```
 
-2. Run the server script with the update flag to create and set up the conda environment:
+2. Run the server script with the update flag to create the virtual environment and install dependencies:
 ```bash
 chmod +x server.sh
 ./server.sh --update
 ```
 
 This will:
-- Create a conda environment named "whisper-api" with Python 3.12
+- Create a `.venv` virtual environment with Python 3.12 using `uv`
 - Install all required dependencies
 - Start the service
 
 ### Manual installation
 
-1. Create and activate a conda environment:
+Requires [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+1. Create a virtual environment and install dependencies:
 ```bash
-conda create -n whisper-api python=3.12
-conda activate whisper-api
+uv venv .venv --python 3.12
+uv pip install -r requirements.txt
 ```
 
-2. Install the required dependencies:
+2. Start the service:
 ```bash
-pip install -r requirements.txt
-```
-
-3. Start the service:
-```bash
-python server.py
+uv run python server.py
 ```
 
 ## Configuration

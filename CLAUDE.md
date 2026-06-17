@@ -10,7 +10,7 @@ Local, OpenAI-compatible speech recognition API service using the Whisper model.
 * **ML**: PyTorch, Hugging Face Transformers (Whisper), Flash Attention 2.
 * **Audio**: FFmpeg, SoX (external), scipy (resampling).
 * **Validation**: python-magic (MIME detection).
-* **Environment**: Conda. Setup: `server.sh`.
+* **Environment**: uv (`.venv`). Setup: `server.sh`.
 * **Language**: Code comments and docstrings in Russian (project convention).
 
 ## Architecture
